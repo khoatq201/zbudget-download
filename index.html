@@ -26,9 +26,10 @@
         dataLayer.push(arguments);
       }
       gtag("js", new Date());
-
-      // Thay G-XXXXXXXXXX bằng Measurement ID của bạn
-      gtag("config", "G-R64BZ1NWJ1");
+      gtag("config", "G-R64BZ1NWJ1", {
+        debug_mode: true,
+        transport_type: "beacon",
+      });
     </script>
   </head>
   <body>
