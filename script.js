@@ -3,10 +3,19 @@ document.addEventListener('DOMContentLoaded', function() {
     const downloadBtn = document.getElementById('downloadBtn');
     const appIcon = document.getElementById('appIcon');
 
-    // Nếu không có icon, tạo placeholder
-    if (!appIcon.src || appIcon.src.includes('app-icon.png')) {
-        // Tạo icon placeholder với gradient
-        createPlaceholderIcon();
+    // Check if icon loads successfully, if not create placeholder
+    if (appIcon) {
+        appIcon.onerror = function() {
+            console.log('⚠️ Icon failed to load, creating placeholder');
+            createPlaceholderIcon();
+        };
+
+        // Check if image actually exists
+        const img = new Image();
+        img.src = appIcon.src;
+        img.onerror = function() {
+            createPlaceholderIcon();
+        };
     }
 
     // Track download button click
@@ -50,16 +59,16 @@ document.addEventListener('DOMContentLoaded', function() {
 function createPlaceholderIcon() {
     const appIcon = document.getElementById('appIcon');
     if (appIcon) {
-        // Tạo canvas với gradient
+        // Tạo canvas với gradient xanh lá
         const canvas = document.createElement('canvas');
         canvas.width = 240;
         canvas.height = 240;
         const ctx = canvas.getContext('2d');
 
-        // Gradient background
+        // Gradient background - Xanh lá
         const gradient = ctx.createLinearGradient(0, 0, 240, 240);
-        gradient.addColorStop(0, '#667eea');
-        gradient.addColorStop(1, '#764ba2');
+        gradient.addColorStop(0, '#11998e');
+        gradient.addColorStop(1, '#38ef7d');
         ctx.fillStyle = gradient;
         ctx.fillRect(0, 0, 240, 240);
 
@@ -71,6 +80,7 @@ function createPlaceholderIcon() {
         ctx.fillText('ZB', 120, 120);
 
         appIcon.src = canvas.toDataURL();
+        console.log('✅ Placeholder icon created');
     }
 }
 

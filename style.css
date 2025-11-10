@@ -7,7 +7,7 @@
 
 body {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);
     min-height: 100vh;
     display: flex;
     justify-content: center;
@@ -105,7 +105,7 @@ body {
 .app-name {
     font-size: 42px;
     font-weight: 800;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -137,7 +137,7 @@ body {
 }
 
 .feature-item {
-    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    background: linear-gradient(135deg, #e8f8f5 0%, #d1f2eb 100%);
     padding: 20px;
     border-radius: 15px;
     display: flex;
@@ -168,7 +168,7 @@ body {
     display: inline-flex;
     align-items: center;
     gap: 12px;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);
     color: white;
     padding: 20px 50px;
     border-radius: 50px;
@@ -176,7 +176,7 @@ body {
     font-size: 20px;
     font-weight: 700;
     transition: all 0.3s ease;
-    box-shadow: 0 10px 30px rgba(102, 126, 234, 0.4);
+    box-shadow: 0 10px 30px rgba(17, 153, 142, 0.4);
     margin-bottom: 40px;
     position: relative;
     overflow: hidden;
@@ -199,7 +199,7 @@ body {
 
 .download-btn:hover {
     transform: translateY(-5px);
-    box-shadow: 0 15px 40px rgba(102, 126, 234, 0.6);
+    box-shadow: 0 15px 40px rgba(17, 153, 142, 0.6);
 }
 
 .download-btn:active {
@@ -241,7 +241,7 @@ body {
 
 /* Installation Guide */
 .installation-guide {
-    background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
+    background: linear-gradient(135deg, #d5f4e6 0%, #a8e6cf 100%);
     padding: 25px;
     border-radius: 20px;
     margin-bottom: 35px;
@@ -265,7 +265,7 @@ body {
 }
 
 .installation-guide strong {
-    color: #d63031;
+    color: #11998e;
 }
 
 /* Stats */
@@ -277,7 +277,7 @@ body {
 }
 
 .stat-item {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);
     color: white;
     padding: 25px;
     border-radius: 20px;
