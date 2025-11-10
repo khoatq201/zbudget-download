@@ -140,30 +140,27 @@ style.textContent = `
 document.head.appendChild(style);
 
 // Load stats placeholder
-// LƯU Ý: Để có số liệu thật, bạn cần:
-// 1. Dùng Google Analytics Dashboard trực tiếp
-// 2. Hoặc tích hợp Google Analytics Reporting API (phức tạp hơn)
-// 3. Hoặc dùng backend để lưu và hiển thị
+// LƯU Ý: Đây là DEMO số liệu, KHÔNG PHẢI số liệu thật
+// Để xem số liệu thật, vào Google Analytics Dashboard: https://analytics.google.com/
 function loadStatsPlaceholder() {
     const totalVisits = document.getElementById('totalVisits');
     const totalDownloads = document.getElementById('totalDownloads');
 
-    // Giả lập loading
     if (totalVisits && totalDownloads) {
         totalVisits.classList.add('loading');
         totalDownloads.classList.add('loading');
 
         setTimeout(() => {
-            // Placeholder numbers - thay bằng API call thật nếu có backend
-            totalVisits.textContent = '-';
-            totalDownloads.textContent = '-';
+            // Hiển thị message thay vì số
+            totalVisits.innerHTML = '<a href="https://analytics.google.com" target="_blank" style="color: white; text-decoration: none; font-size: 16px;">Xem trên<br>GA Dashboard</a>';
+            totalDownloads.innerHTML = '<a href="https://analytics.google.com" target="_blank" style="color: white; text-decoration: none; font-size: 16px;">Xem trên<br>GA Dashboard</a>';
 
             totalVisits.classList.remove('loading');
             totalDownloads.classList.remove('loading');
 
             // Thêm tooltip
-            totalVisits.title = 'Xem thống kê chi tiết trên Google Analytics Dashboard';
-            totalDownloads.title = 'Xem thống kê chi tiết trên Google Analytics Dashboard';
+            totalVisits.title = 'Click để xem thống kê chi tiết trên Google Analytics';
+            totalDownloads.title = 'Click để xem thống kê chi tiết trên Google Analytics';
         }, 1000);
     }
 }
